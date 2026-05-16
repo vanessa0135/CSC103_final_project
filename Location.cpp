@@ -10,6 +10,8 @@ class Location{
 
     public:
     Location(string name, string description);
+    string getName();
+    string getDescription();
        
 };
 
@@ -18,3 +20,10 @@ Location::Location(string name, string description){
     this->description = description;
 }
 
+string Location::getName(){
+    return name;
+}
+
+string Location::getDescription(){
+    return description;
+}

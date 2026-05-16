@@ -2,22 +2,26 @@
 
 using namespace std;
 
-void welcomeParagraph(){
-   //write the welcome 'page' - include some ascii art
 
-   /*
-   1. Read Instructions
-   2. Play!
-   3. Exit
-   */
+
+void startGame(){
+   //calls scene1
+   //clue1
+   //clue2
+   cout << "this is startGame()";
+   cin.ignore();
+   cin.get();
 }
-
 void instructions(){
    //explains the plot + how the game works
+   cout << "this is instructions()";
+   cin.ignore();
+   cin.get();
 }
 
 void scene1(){
    //this is the part where the user is chilling and they get a mysterious message
+
 }
 
 void firstClue(){
@@ -45,7 +49,60 @@ void orangeTrainLine(){
 }
 
 //.... more functions to come
+void welcomeParagraph(){
+   //write the welcome 'page' - include some ascii art
+   cout << "\nWelcome to [insert game title!]" << endl;
+   cout << "           W            __  __" << endl;
+   cout << "          [ ]          |::||::|" << endl;
+   cout << "           3   ._.     |::||::|   ._." << endl;
+   cout << "          /|   |:| ._. |::||::|   |/|" << endl;
+   cout << "      \\|// /   |:|_|/| |::||::|_  |/|" << endl;
+   cout << "     -( )-|    |:|\"|/|_|::||::|\\|_|/| _" << endl;
+   cout << "      J V |    |:|\"|/|||::||::|\\|||/||:|" << endl;
+   cout << "___  '    /  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+   cout << "\\  \\/    |        ~~~ ~~~ ~~~~~ ~~~~~";
+   
+}
 
 int main () {
-   cout << "Hello World" << endl;
+   welcomeParagraph();
+      
+
+   while(true){
+      cout << "\nMenu:" << endl;
+      cout << "1. Instuctions\n2. Play\n3. Exit\n";
+
+      cout << "Please enter your choice: " << endl;
+      int userInput;
+      cin >> userInput;
+
+      if(userInput == 1){
+         instructions();
+
+      
+   }
+      else if(userInput == 2){
+         startGame();
+   }
+      else if(userInput == 3){
+      break;
+   }
+      else{
+      // cin.ignore();
+      // cin.get();
+      cout << "\nThis is not one of the choices, try again!" << endl;
+      
+      
+      
+      
+      // cin.clear();
+      // cin.ignore(1000, '\n'); //clear input
+   
+
+   }
+
+   }
+   
+   
+   return 0;
 }
